@@ -153,8 +153,8 @@ function additem(id){
         var newitem=Productes.find(e=>{return e.id==id})
         itemsadded=[...itemsadded,newitem]
         if(localStorage.getItem(`amount${id}`)){
-            document.getElementById(`amount${id}`).innerHTML=+(localStorage.getItem(`amount${id}`))+1
-            localStorage.setItem(`amount${id}`,+(localStorage.getItem(`amount${id}`))+1)
+            document.getElementById(`amount${id}`).innerHTML=+(localStorage.getItem(`amount${id}`))
+            localStorage.setItem(`amount${id}`,+(localStorage.getItem(`amount${id}`)))
         }else{
             localStorage.setItem(`amount${id}`,1)
             document.getElementById(`amount${id}`).innerHTML=1
