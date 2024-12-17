@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="icon" href="./media/icon.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <header>
+        <img src="./media/icon.png" alt="image" />
+        <div class="centerByFlex">
+            <div id="bagshopping">
+                <img src="./media/cart.png" alt="icon" />
+                <span id="counter">0</span>
+            </div>
+            <i class="fa-solid fa-arrow-right-from-bracket" id="signout"></i>
+        </div>
+    </header>
+    <div id="shoppingcart" >
+        <div class="itemsinshoppingcart">
+            <i id="closeshoppingcart" class="fa-regular fa-circle-xmark"></i>
+            <div class="title">
+                <h3>Shopping Cart</h3>
+                <p id="numberofitems">0 items</p>
+            </div>
+            <div id="orders"></div>
+        </div>
+        <div id="bottom">
+            <h1 id="totalnum">No Items</h1>
+            <button id="buynow">Buy Now</button>
+        </div>
+    </div>
+    <main>
+        <h3 id="welcome"></h3>
+        <img src="./media/image.png" alt="img" id="animationimg"/>
+    </main>
+    <div id="box" class="centerByX centerByFlex">
+    </div>
+    <div id="buy">
+        <div id="line"></div>
+        <h3>your order is done!</h3>
+    </div>
+
+    <script src="./home.js"></script>
+</body>
+</html>

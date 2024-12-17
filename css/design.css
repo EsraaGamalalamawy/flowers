@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    height: 0;
+    perspective: 3000px;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --maincolor:#ff859a;
+    --timer:1s;
+    --fontcolor:#393232;
+}
+/* /////////////////////////use more than once/////////////////////// */
+.centerByX{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.centerByFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* //////////////////////////////////////////////////////////////// */
+#boxing{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--timer);
+    transform-origin: 25%;
+}
+#front{
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+#front .image{
+    height: 55%;
+    position: relative;
+}
+#front img{
+    height: 50vh;
+    max-width: 100vw;
+    position: absolute;
+    top: 10px;
+    animation: imageani 1s infinite linear alternate;
+}
+@keyframes imageani {
+    from{top: 10px;}
+    to{top: 25px;}
+}
+#front h1{
+    padding: 10px 0;
+}
+#front #start{
+    background: var(--maincolor);
+    margin: 30px 0;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* /////////////////////////////////////////////////////////////// */
+.back{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+#login{
+    display: none;
+    position: relative;
+}
+.back section{
+    flex-direction: column;
+    height: 90%;
+    justify-content: flex-start;
+}
+.back h1{
+    font-size: 31px;
+    margin-bottom: 40px;
+}
+.back img{
+    width: 35%;
+}
+.back form{
+    width: 40%;
+}
+.back label{
+    cursor: pointer;
+}
+.back .info div{
+    color: red;
+    padding: 3px;
+}
+.back .info{
+    position: relative;
+}
+.back form i,.back .content i{
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
+    font-size: 16px;
+    opacity: .7;
+}
+.back input{
+    width: 100%;
+    padding: 7px 30px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px 0px black;
+    margin: 5px 0;
+}
+.back input:focus{
+    box-shadow: inset 0 0 5px 0 black;
+}
+.back input::placeholder{
+    color:var(--fontcolor)
+}
+.back #goFromSign,.back #goFromLogin{
+    margin: 25px 0 5px;
+    background: var(--maincolor);
+    cursor: pointer;
+}
+.back #loginsection, .back #signupsection{
+    background: var(--maincolor);
+    width: 100vw;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    transition: var(--timer);
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    height: 18%;
+    opacity: 1;
+}
+.back #loginsection h3,.back #signupsection h3{
+    background: white;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#forget{
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0 black;
+}
+#forget i{
+    cursor: pointer;
+}
+#forget .top{
+    justify-content: space-between;
+}
+#forget .content{
+    margin-top: 20px;
+}
+#forget #send{
+    margin-left: 8px;
+    padding: 7px 8px;
+    border-radius: 8px;
+    background: var(--maincolor);
+    cursor: pointer;
+}
+#forget #showpass{
+    margin: 30px;
+    padding: 7px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 7px 0 black;
+    text-align: center
+}
+#ok{
+    background: var(--maincolor);
+    border: none;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 7px;
+    align-self: end;
+    cursor: pointer;
+}
+#noaccount{
+    background: var(--maincolor);
+    width: 40%;
+    border-radius: 7px;
+    padding: 5px 8px 12px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 3px 0 black;
+    z-index: 5;
+    text-align: center;
+}
+#noaccount i{
+    align-self: end;
+    cursor: pointer;
+}
+/* /////////////////////////////////media/////////////////////// */
+@media (max-width:678px) {
+    #front{
+        padding: 0 50px;
+    }
+    .back .content{
+        flex-direction: column;
+    }
+    .back form{
+        width: 90%;
+    }
+    #forget{
+        width: 90%;
+    }
+    #noaccount{
+        width:80%
+    }
+}

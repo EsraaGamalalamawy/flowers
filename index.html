@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart </title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/design.css">
+</head>
+<body>
+    <div class="centerByX" id="boxing">
+        <!-- welcome page -->
+        <div class="centerByFlex" id="front">
+            <div class="image">
+                <img src="./media/shoppig.png" alt="image" class="centerByX">
+            </div>
+            <h1>Welcome to Flowers shopping website</h1>
+            <p>start your shopping for free, get everything you want in les than a minute,you must enter 
+                an email tobegin the purchascing process.
+            </p>
+            <button id="start">Get start</button>
+        </div>
+        <div class="back centerByFlex">
+            <!-- signup section -->
+            <section id="signup" class="centerByFlex">
+                <h1>SignUp</h1>
+                <div class="centerByFlex content">
+                    <img src="./media/login.png" alt="image" >
+                    <form>
+                        <div class="info">
+                            <div id="errorUN"></div>
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" placeholder="User Name.." id="usernameSign"/>
+                        </div>
+                        <div class="info">
+                            <div id="errorE"></div>
+                            <i class="fa-regular fa-user"></i>
+                            <input type="email" placeholder="Email.." id="emailSign"/>
+                        </div>
+                        <div class="info">
+                            <div id="errorP"></div>
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password.." id="passwordSign"/>
+                        </div>
+                        <div class="info">
+                            <div id="errorCP"></div>
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Consfirm Password.." id="ConsfirmPass"/>
+                        </div>
+                        <input type="submit" value="SignUp" id="goFromSign" >
+                    </form>
+                </div>
+                <div class="centerByFlex" id="loginsection">
+                    <h3 id="tologin">Login</h3>
+                    <p>if you already have an account!</p>
+                </div>
+            </section>
+            <!-- login section -->
+            <section id="login" class="centerByFlex">
+                <h1>Login</h1>
+                <div class="centerByFlex content">
+                    <img src="./media/login.png" alt="image" >
+                    <form>
+                        <div class="errorlogin"></div>
+                        <div class="info">
+                            <div id="errorloginU"></div>
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" placeholder="User Name.." id="username"/>
+                        </div>
+                        <div class="info">
+                            <div id="errorloginP"></div>
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password.." id="password"/>
+                        </div>
+                        <input type="submit" value="LogIn" id="goFromLogin" >
+                        <label id="forgetlink">forget passwod?</label>
+                    </form>
+                </div>
+                <div class="centerByFlex" id="signupsection">
+                    <h3 id="tosignup">SignUp</h3>
+                    <p>if don't have any account!</p>
+                </div>
+                <div id="noaccount" >
+                    <i id="closenoaccount" class="fa-regular fa-circle-xmark"></i>
+                    <p>you don't have any account</p>
+                </div>
+                <div id="forget">
+                    <div class="top centerByFlex">
+                        <h2>Forget passwod</h2>
+                        <i id="closeForget" class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                    <div class="content">
+                        <div id="errorforget"></div>
+                        <div class="info centerByFlex">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="email" placeholder="Enter your email..." id="emailforget"/>
+                            <button id="send">send</button>
+                        </div>
+                        <div id="showpass">your passwod will appear here</div>
+                    </div>
+                    <button id="ok">OK</button>
+                </div>
+            </section>
+        
+        </div>
+    </div>
+
+
+    <script src="coding.js"></script>
+</body>
+</html>
